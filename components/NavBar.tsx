@@ -3,20 +3,13 @@ import React, { useState } from "react";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  BookmarkSquareIcon,
-  CalendarIcon,
   ChartBarIcon,
-  CursorArrowRaysIcon,
-  LifebuoyIcon,
-  PhoneIcon,
-  PlayIcon,
-  ShieldCheckIcon,
-  Squares2X2Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { BsFacebook, BsInstagram } from 'react-icons/bs'
+import { AiTwotonePhone } from 'react-icons/ai'
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -37,7 +30,7 @@ const NavBar = () => {
               </Link>
             </div>
             <div className="-my-2 -mr-2 md:hidden">
-              <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 ">
                 <span className="sr-only">Open menu</span>
                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -48,15 +41,15 @@ const NavBar = () => {
                   <>
                     <Popover.Button
                       className={classNames(
-                        open ? "text-gray-900" : "text-gray-500",
-                        "group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none"
+                        open ? "text-gold" : "text-black",
+                        "group inline-flex items-center border-inherit bg-white "
                       )}
                     >
-                      <span>Oferta</span>
+                      <span className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">OFERTA</span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? "text-gray-600" : "text-gray-400",
-                          "ml-2 h-5 w-5 group-hover:text-gray-500"
+                          open ? "text-gold" : "text-gray-900",
+                          "ml-2 h-5 w-5 group-hover:text-gold"
                         )}
                         aria-hidden="true"
                       />
@@ -78,10 +71,10 @@ const NavBar = () => {
                               <a
                                 key={item.name}
                                 href={item.href}
-                                className="-m-4 flex items-start rounded-lg p-2 hover:bg-gray-50"
+                                className="-m-4 flex items-start rounded-lg p-2 hover:text-gold"
                               >
                                 <div className="ml-4">
-                                  <p className="text-base font-medium text-gray-900">
+                                  <p className="text-base font-medium text-gray-900 hover:text-gold">
                                     {item.name}
                                   </p>
                                 </div>
@@ -95,35 +88,47 @@ const NavBar = () => {
                 )}
               </Popover>
               <Link href="/cennik">
-                <h3 className="text-base font-medium text-gray-500 hover:text-gray-900">
-                  Cennik
+                <h3 className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                  CENNIK
                 </h3>
               </Link>
               <Link href="/salon">
-                <h3 className="text-base font-medium text-gray-500 hover:text-gray-900">
-                  Salon
+                <h3 className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                  SALON
                 </h3>
               </Link>
               <Link href="/academy">
-                <h3 className="text-base font-medium text-gray-500 hover:text-gray-900">
-                  Beauty Academy
+                <h3 className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                  BEAUTY ACADEMY
                 </h3>
               </Link>
               <Link href="/galeria">
-                <h3 className="text-base font-medium text-gray-500 hover:text-gray-900">
-                  Galeria
+                <h3 className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                  GALERIA
                 </h3>
               </Link>
-              <Link href="/sklep">
-                <h3 className="text-base font-medium text-gray-500 hover:text-gray-900">
-                  Sklep
+              <Link href="/opinie">
+                <h3 className="font-serif text-lg font-light tracking-wide text-gray-700 hover:text-gold">
+                  OPINIE
                 </h3>
               </Link>
               <Link href="/kontakt">
-                <h3 className="text-base font-medium text-gray-500 hover:text-gray-900">
-                  Kontakt
+                <h3 className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                  KONTAKT
                 </h3>
               </Link>
+              <div className="grid gap-y-2">
+              <Link href="">
+                <span><BsInstagram /></span>
+              </Link>
+              <Link href="">
+                <span><BsFacebook /></span>
+              </Link>
+              <Link href="">
+                <span><AiTwotonePhone /></span>
+              </Link>
+              </div>
+
             </Popover.Group>
           </div>
         </div>
@@ -162,11 +167,11 @@ const NavBar = () => {
                   <nav className="grid gap-y-6">
                     <div
                       onClick={() => setOpen(!open)}
-                      className="-m-4 flex items-center rounded-md p-3 hover:bg-gray-50"
+                      className="-m-4 flex items-center rounded-md p-3"
                     >
-                      <span className="ml-3 text-base font-medium text-gray-900">
+                      <h3 className="ml-3 text-base font-medium text-gray-900 hover:text-gold">
                         Oferta
-                      </span>
+                      </h3>
                     </div>
                     {open && (
                       <div className="space-y-6 py-6 px-5">
@@ -175,7 +180,7 @@ const NavBar = () => {
                             <a
                               key={item.name}
                               href={item.href}
-                              className="text-base font-medium text-gray-900 hover:text-gray-700"
+                              className="text-base font-medium text-gray-900 hover:text-gold"
                             >
                               {item.name}
                             </a>
@@ -187,9 +192,9 @@ const NavBar = () => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-m-4 flex items-center rounded-md p-3 hover:bg-gray-50"
+                        className="-m-4 flex items-center rounded-md p-3 hover:text-gold"
                       >
-                        <span className="ml-3 text-base font-medium text-gray-900">
+                        <span className="ml-3 text-base font-medium text-gray-900 hover:text-gold">
                           {item.name}
                         </span>
                       </a>
