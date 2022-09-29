@@ -27,6 +27,7 @@ module.exports = {
         serif: ['Effra', 'sans-serif'],
         sans: ['Noto Sans', 'sans-serif'],
         sans2: ['Roboto', 'sans-serif'],
+        mont: ['Montserrat', 'sans-serif']
       }
     },
   },

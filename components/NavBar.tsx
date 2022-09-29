@@ -8,8 +8,8 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { BsFacebook, BsInstagram } from 'react-icons/bs'
-import { AiTwotonePhone } from 'react-icons/ai'
+import { BsFacebook, BsInstagram } from "react-icons/bs";
+import { AiTwotonePhone } from "react-icons/ai";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -18,12 +18,12 @@ const NavBar = () => {
   return (
     <>
       <Popover className="relative bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-            <div className="flex justify-start lg:w-0 lg:flex-1">
+        <div className="px-1 sm:px-1">
+          <div className="flex items-center justify-between border-b-2 border-gray-100 md:justify-start md:space-x-6">
+            <div className="flex justify-start lg:flex-1">
               <Link href="/">
                 <img
-                  className="w-40 object-contain cursor-pointer"
+                  className="h-40 object-contain cursor-pointer"
                   src="https://i.ibb.co/zm8Fyt8/znak-wodny-2.png"
                   alt="logo"
                 />
@@ -35,7 +35,7 @@ const NavBar = () => {
                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
             </div>
-            <Popover.Group as="nav" className="hidden space-x-10 md:flex">
+            <Popover.Group as="nav" className="hidden space-x-5 md:flex">
               <Popover className="relative">
                 {({ open }) => (
                   <>
@@ -45,7 +45,9 @@ const NavBar = () => {
                         "group inline-flex items-center border-inherit bg-white "
                       )}
                     >
-                      <span className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">OFERTA</span>
+                      <span className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                        OFERTA
+                      </span>
                       <ChevronDownIcon
                         className={classNames(
                           open ? "text-gold" : "text-gray-900",
@@ -88,12 +90,12 @@ const NavBar = () => {
                 )}
               </Popover>
               <Link href="/cennik">
-                <h3 className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                <h3 className="font-mono text-lg font-light tracking-wide text-gray-900 hover:text-gold">
                   CENNIK
                 </h3>
               </Link>
               <Link href="/salon">
-                <h3 className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                <h3 className="font-mono text-lg font-light tracking-wide text-gray-900 hover:text-gold">
                   SALON
                 </h3>
               </Link>
@@ -117,18 +119,19 @@ const NavBar = () => {
                   KONTAKT
                 </h3>
               </Link>
-              <div className="grid gap-y-2">
-              <Link href="">
-                <span><BsInstagram /></span>
-              </Link>
-              <Link href="">
-                <span><BsFacebook /></span>
-              </Link>
-              <Link href="">
-                <span><AiTwotonePhone /></span>
-              </Link>
+              <div className="flex items-center gap-x-2">
+                <Link href="">
+                  <span className="hover:text-gold">
+                    <BsInstagram />
+                  </span>
+                </Link>
+                <Link href="">
+                  <span className="hover:text-gold">
+                    <BsFacebook />
+                  </span>
+                </Link>
+                  <span> +48 501 451 401</span>
               </div>
-
             </Popover.Group>
           </div>
         </div>
@@ -287,6 +290,6 @@ const menu = [
   },
 ];
 
-function classNames(...classes:any) {
+function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
