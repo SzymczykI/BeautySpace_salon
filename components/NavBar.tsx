@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Popover className="sticky px-4 top-0 bg-white">
+      <Popover className="sticky z-50 px-4 top-0 bg-white">
         <div className="px-1 sm:px-1">
           <div className="flex items-center justify-between border-b-2 border-gray-100 md:justify-start md:space-x-6">
             <div className="flex justify-start lg:flex-1">

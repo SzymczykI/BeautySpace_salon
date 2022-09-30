@@ -1,20 +1,24 @@
 import type { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import About from "../components/About";
+import Academy from "../components/Academy";
 import Header from "../components/Header";
-
 
 const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div>
       <Head>
         <title>Paulina Szymczyk Beauty Space</title>
-        <meta name="description" content="Beauty Space - salon kosmetyczny w Lublinie" />
+        <meta
+          name="description"
+          content="Beauty Space - salon kosmetyczny w Lublinie"
+        />
       </Head>
       
-      <Header />
-      <About />
-
+        <Header />
+        <About />
+        <Academy />
+      
     </div>
   );
 };
@@ -26,8 +30,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      data
+      data,
     },
-    revalidate: 4 * 60 * 60
-  }
+    revalidate: 4 * 60 * 60,
+  };
 }
