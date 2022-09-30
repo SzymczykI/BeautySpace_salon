@@ -20,15 +20,11 @@ module.exports = {
         800: '#1f2937',
         900: '#111827'
       },
-      black: '#171717'
+      'black': '#171717',
+      'trans': '#FFFFFF17'
     },
     extend: {
-      fontFamily: {
-        serif: ['Effra', 'sans-serif'],
-        sans: ['Noto Sans', 'sans-serif'],
-        sans2: ['Roboto', 'sans-serif'],
-        mont: ['Montserrat', 'sans-serif']
-      }
+      
     },
   },
   plugins: [],

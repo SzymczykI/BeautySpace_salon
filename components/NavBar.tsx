@@ -9,7 +9,6 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
-import { AiTwotonePhone } from "react-icons/ai";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -17,7 +16,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Popover className="relative bg-white">
+      <Popover className="sticky px-4 top-0 bg-white">
         <div className="px-1 sm:px-1">
           <div className="flex items-center justify-between border-b-2 border-gray-100 md:justify-start md:space-x-6">
             <div className="flex justify-start lg:flex-1">
@@ -30,7 +29,7 @@ const NavBar = () => {
               </Link>
             </div>
             <div className="-my-2 -mr-2 md:hidden">
-              <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 ">
+              <Popover.Button className="inline-flex items-center justify-center bg-white p-2 text-gray-400 ">
                 <span className="sr-only">Open menu</span>
                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -45,7 +44,7 @@ const NavBar = () => {
                         "group inline-flex items-center border-inherit bg-white "
                       )}
                     >
-                      <span className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                      <span className="text-base font-light tracking-wide text-gray-900 hover:text-gold">
                         OFERTA
                       </span>
                       <ChevronDownIcon
@@ -76,7 +75,7 @@ const NavBar = () => {
                                 className="-m-4 flex items-start rounded-lg p-2 hover:text-gold"
                               >
                                 <div className="ml-4">
-                                  <p className="text-base font-medium text-gray-900 hover:text-gold">
+                                  <p className="text-base uppercase font-medium text-gray-900 hover:text-gold">
                                     {item.name}
                                   </p>
                                 </div>
@@ -90,47 +89,55 @@ const NavBar = () => {
                 )}
               </Popover>
               <Link href="/cennik">
-                <h3 className="font-mono text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                <h3 className=" text-base font-light tracking-wide cursor-pointer text-gray-900 hover:text-gold">
                   CENNIK
                 </h3>
               </Link>
               <Link href="/salon">
-                <h3 className="font-mono text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                <h3 className=" text-base font-light tracking-wide cursor-pointer text-gray-900 hover:text-gold">
                   SALON
                 </h3>
               </Link>
               <Link href="/academy">
-                <h3 className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                <h3 className="text-base font-light tracking-wide cursor-pointer text-gray-900 hover:text-gold">
                   BEAUTY ACADEMY
                 </h3>
               </Link>
               <Link href="/galeria">
-                <h3 className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                <h3 className=" text-base font-light tracking-wide cursor-pointer text-gray-900 hover:text-gold">
                   GALERIA
                 </h3>
               </Link>
               <Link href="/opinie">
-                <h3 className="font-serif text-lg font-light tracking-wide text-gray-700 hover:text-gold">
+                <h3 className="text-base font-light tracking-wide cursor-pointer text-gray-700 hover:text-gold">
                   OPINIE
                 </h3>
               </Link>
               <Link href="/kontakt">
-                <h3 className="font-serif text-lg font-light tracking-wide text-gray-900 hover:text-gold">
+                <h3 className=" text-base font-light tracking-wide cursor-pointer text-gray-900 hover:text-gold">
                   KONTAKT
                 </h3>
               </Link>
               <div className="flex items-center gap-x-2">
-                <Link href="">
-                  <span className="hover:text-gold">
+                <Link href="https://www.instagram.com/ps.beautyspace/">
+                  <span className="cursor-pointer hover:text-gold">
                     <BsInstagram />
                   </span>
                 </Link>
-                <Link href="">
-                  <span className="hover:text-gold">
+                <Link href="https://www.facebook.com/psbeautyspace/">
+                  <span className="cursor-pointer hover:text-gold">
                     <BsFacebook />
                   </span>
                 </Link>
-                  <span> +48 501 451 401</span>
+                <Link href="https://booksy.com/pl-pl/6703_paulina-szymczyk-beauty-space_salon-kosmetyczny_6832_lublin">
+                  <span className="cursor-pointer hover:text-gold">
+                    <img
+                      className="h-4"
+                      src="https://logos-download.com/wp-content/uploads/2021/01/Booksy_Logo.png"
+                    />
+                  </span>
+                </Link>
+                <span> +48 501 451 401</span>
               </div>
             </Popover.Group>
           </div>
@@ -173,7 +180,7 @@ const NavBar = () => {
                       className="-m-4 flex items-center rounded-md p-3"
                     >
                       <h3 className="ml-3 text-base font-medium text-gray-900 hover:text-gold">
-                        Oferta
+                        OFERTA
                       </h3>
                     </div>
                     {open && (
@@ -183,7 +190,7 @@ const NavBar = () => {
                             <a
                               key={item.name}
                               href={item.href}
-                              className="text-base font-medium text-gray-900 hover:text-gold"
+                              className="text-base uppercase font-medium text-gray-900 hover:text-gold"
                             >
                               {item.name}
                             </a>
@@ -197,11 +204,32 @@ const NavBar = () => {
                         href={item.href}
                         className="-m-4 flex items-center rounded-md p-3 hover:text-gold"
                       >
-                        <span className="ml-3 text-base font-medium text-gray-900 hover:text-gold">
+                        <span className="ml-3 uppercase text-base font-medium text-gray-900 hover:text-gold">
                           {item.name}
                         </span>
                       </a>
                     ))}
+                    <div className="flex items-center gap-x-3">
+                      <Link href="https://www.instagram.com/ps.beautyspace/">
+                        <span className="cursor-pointer hover:text-gold">
+                          <BsInstagram />
+                        </span>
+                      </Link>
+                      <Link href="https://www.facebook.com/psbeautyspace/">
+                        <span className="cursor-pointer hover:text-gold">
+                          <BsFacebook />
+                        </span>
+                      </Link>
+                      <Link href="https://booksy.com/pl-pl/6703_paulina-szymczyk-beauty-space_salon-kosmetyczny_6832_lublin">
+                        <span className="cursor-pointer hover:text-gold">
+                          <img
+                            className="h-4"
+                            src="https://logos-download.com/wp-content/uploads/2021/01/Booksy_Logo.png"
+                          />
+                        </span>
+                      </Link>
+                      <span> +48 501 451 401</span>
+                    </div>
                   </nav>
                 </div>
               </div>
