@@ -23,8 +23,11 @@ module.exports = {
       'black': '#171717',
       'trans': '#FFFFFF17'
     },
+     container: {
+      margin: '0rem',
+    },
     extend: {
-      
+
     },
   },
   plugins: [],

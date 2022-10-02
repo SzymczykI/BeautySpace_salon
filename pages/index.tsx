@@ -2,7 +2,10 @@ import type { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import About from "../components/About";
 import Academy from "../components/Academy";
+import Contact from "../components/Contact";
+import CTA from "../components/CTA";
 import Header from "../components/Header";
+import Testimonials from "../components/Testimonials";
 
 const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
@@ -14,10 +17,13 @@ const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
           content="Beauty Space - salon kosmetyczny w Lublinie"
         />
       </Head>
-      
-        <Header />
-        <About />
-        <Academy />
+
+      <Header />
+      <About />
+      <Academy />
+      <Testimonials />
+      <CTA />
+      <Contact />
       
     </div>
   );

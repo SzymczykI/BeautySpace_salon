@@ -108,11 +108,6 @@ const NavBar = () => {
                   GALERIA
                 </h3>
               </Link>
-              <Link href="/opinie">
-                <h3 className="text-base font-light tracking-wide cursor-pointer text-gray-700 hover:text-gold">
-                  OPINIE
-                </h3>
-              </Link>
               <Link href="/kontakt">
                 <h3 className=" text-base font-light tracking-wide cursor-pointer text-gray-900 hover:text-gold">
                   KONTAKT
