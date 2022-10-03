@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/*.{js,ts,jsx,tsx}",
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
     colors: {
@@ -21,7 +22,8 @@ module.exports = {
         900: '#111827'
       },
       'black': '#171717',
-      'trans': '#FFFFFF17'
+      'trans': '#FFFFFF17',
+      'white': '#FFFFFF',
     },
      container: {
       margin: '0rem',

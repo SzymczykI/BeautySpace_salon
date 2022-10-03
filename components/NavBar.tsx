@@ -132,7 +132,9 @@ const NavBar = () => {
                     />
                   </span>
                 </Link>
-                <span> +48 501 451 401</span>
+                <h5 className="text-lg text-gold">
+                  <a href="tel:+48501451401">+48 501 451 401</a>
+                </h5>
               </div>
             </Popover.Group>
           </div>
@@ -223,7 +225,9 @@ const NavBar = () => {
                           />
                         </span>
                       </Link>
-                      <span> +48 501 451 401</span>
+                      <h5 className="text-lg text-gold hover:text-black">
+                        <a href="tel:+48501451401">+48 501 451 401</a>
+                      </h5>
                     </div>
                   </nav>
                 </div>

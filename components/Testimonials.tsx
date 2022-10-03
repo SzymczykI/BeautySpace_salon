@@ -6,12 +6,11 @@ import Link from "next/link";
 
 const Testimonials = () => {
   const settings = {
-    infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     nextArrow: <GrNext />,
     prevArrow: <GrPrevious />,
     swipeToSlide: true,
@@ -19,8 +18,8 @@ const Testimonials = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
           infinite: true,
         },
       },
@@ -28,7 +27,7 @@ const Testimonials = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
@@ -47,11 +46,11 @@ const Testimonials = () => {
     <div className="container items-center justify-center mb-6">
       <h1 className="text-4xl text-center text-gold pt-10 mb-2">OPINIE</h1>
       <p className="text-lg text-center mb-6 ">
-        Sprawdź co o naszych usługach sądzą klientki
+        Sprawdź co o naszych usługach sądzą klienci
       </p>
       <Slider {...settings}>
         {opinie.map((item) => (
-          <div className="p-6 max-w-sm h-max bg-center bg-cover custom-bg rounded-lg border border-gray-200 shadow-md">
+          <div className="p-6 max-w-sm mx-3 h-max bg-center bg-cover custom-bg rounded-lg border border-gray-200 shadow-md">
             <h2 className="mb-4 tracking-tight text-xl text-center text-gray-900">
               {item.service}
             </h2>

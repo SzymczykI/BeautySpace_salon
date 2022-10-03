@@ -7,15 +7,15 @@ const Header = () => {
       <Link href="/salon">
         <button
           type="button"
-          className="inline-flex items-center bg-trans border-2 border-white px-16 py-3 text-sm font-medium text-white shadow-sm hover:bg-black "
+          className="inline-flex items-center  px-16 py-3 text-sm font-medium text-gold bg-white shadow-sm hover:bg-black"
         >
           SALON
         </button>
       </Link>
-      <Link href="akademia">
+      <Link href="/akademia">
         <button
           type="button"
-          className="inline-flex items-center mx-2 px-14 py-3 text-sm font-medium text-white bg-gold shadow-sm hover:bg-black "
+          className="inline-flex items-center mx-2 px-14 py-3 text-sm font-medium text-white bg-gold shadow-sm hover:bg-black"
         >
           AKADEMIA
         </button>

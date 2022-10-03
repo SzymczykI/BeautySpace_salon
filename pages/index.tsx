@@ -2,7 +2,6 @@ import type { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import About from "../components/About";
 import Academy from "../components/Academy";
-import Contact from "../components/Contact";
 import CTA from "../components/CTA";
 import Header from "../components/Header";
 import Testimonials from "../components/Testimonials";
@@ -21,10 +20,9 @@ const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <Header />
       <About />
       <Academy />
-      <Testimonials />
       <CTA />
-      <Contact />
-      
+      <Testimonials />
+
     </div>
   );
 };
