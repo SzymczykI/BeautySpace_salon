@@ -11,8 +11,7 @@ const Testimonials = () => {
     autoplaySpeed: 2000,
     slidesToShow: 3,
     slidesToScroll: 3,
-    nextArrow: <GrNext />,
-    prevArrow: <GrPrevious />,
+   
     swipeToSlide: true,
     responsive: [
       {
@@ -50,7 +49,7 @@ const Testimonials = () => {
       </p>
       <Slider {...settings}>
         {opinie.map((item) => (
-          <div className="p-6 max-w-sm mx-3 h-max bg-center bg-cover custom-bg rounded-lg border border-gray-200 shadow-md">
+          <div key={item.name} className="p-6 max-w-sm mx-3 h-max bg-center bg-cover custom-bg rounded-lg border border-gray-200 shadow-md">
             <h2 className="mb-4 tracking-tight text-xl text-center text-gray-900">
               {item.service}
             </h2>

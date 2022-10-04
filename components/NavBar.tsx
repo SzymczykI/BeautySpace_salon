@@ -245,7 +245,7 @@ export default NavBar;
 const oferta = [
   {
     name: "Makijaż Permanentny",
-    href: "/oferta/makijaz_pernamentny",
+    href: "/oferta/makijaz_permanentny",
     icon: ChartBarIcon,
   },
   {
@@ -277,7 +277,7 @@ const oferta = [
     href: "#",
   },
   {
-    name: " NOWOŚĆ! Depilacja - Laser Diodowy",
+    name: "Depilacja",
     href: "#",
   },
   {
