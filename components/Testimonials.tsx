@@ -1,17 +1,14 @@
 import React from "react";
 import Slider from "react-slick";
 import { IoMdQuote } from "react-icons/io";
-import { GrPrevious, GrNext } from "react-icons/gr";
 import Link from "next/link";
 
 const Testimonials = () => {
   const settings = {
-    speed: 500,
     autoplay: true,
     autoplaySpeed: 2000,
     slidesToShow: 3,
-    slidesToScroll: 3,
-   
+    slidesToScroll: 1,
     swipeToSlide: true,
     responsive: [
       {

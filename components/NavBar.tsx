@@ -13,7 +13,8 @@ import { BsFacebook, BsInstagram } from "react-icons/bs";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
-
+  
+  
   return (
     <>
       <Popover className="sticky z-50 px-4 top-0 bg-white">
@@ -241,6 +242,7 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
 
 const oferta = [
   {

@@ -6,7 +6,7 @@ const CTA = () => {
   return (
     <section className="flex justify-start flex-initial h-[32rem] bg-center bg-local bg-cover bg-no-repeat md:h-screen paulina">
       <div className="mt-20 md:mt-72 md:ml-72">
-        <h1 className="text-2xl pl-6 md:text-4xl">ZAREZERWUJ WIZYTĘ</h1>
+        <h1 className="text-2xl pl-6 text-gold md:text-4xl">ZAREZERWUJ WIZYTĘ</h1>
         <h5 className="pl-6 md:text-lg">Wygodna rezerwacja on-line</h5>
         <Link href="https://booksy.com/pl-pl/6703_paulina-szymczyk-beauty-space_salon-kosmetyczny_6832_lublin">
           <button

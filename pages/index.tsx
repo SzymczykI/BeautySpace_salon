@@ -4,9 +4,15 @@ import About from "../components/About";
 import Academy from "../components/Academy";
 import CTA from "../components/CTA";
 import Header from "../components/Header";
+import NavBar from "../components/NavBar";
 import Testimonials from "../components/Testimonials";
+import { sanityClient, urlFor } from "../sanity";
+import { Props } from "../types";
 
-const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
+
+const Home = ({ categories }: Props) => {
+  
+
   return (
     <div>
       <Head>
@@ -16,7 +22,7 @@ const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
           content="Beauty Space - salon kosmetyczny w Lublinie"
         />
       </Head>
-
+<NavBar />
       <Header />
       <About />
       <Academy />
@@ -29,13 +35,18 @@ const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
 export default Home;
 
-export async function getStaticProps() {
-  const data = [""];
+export const getServerSideProps = async () => {
+  const query = `*[_type == "category"]{
+    title,
+    description, 
+    slug
+  }`
 
+  const categories = await sanityClient.fetch(query);
   return {
     props: {
-      data,
-    },
-    revalidate: 4 * 60 * 60,
-  };
+      categories
+    }
+  }
+
 }
