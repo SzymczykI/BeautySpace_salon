@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { BsFacebook, BsInstagram } from "react-icons/bs";
 
 const CTA = () => {
   return (

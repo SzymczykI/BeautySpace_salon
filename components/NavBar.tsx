@@ -9,12 +9,11 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
+import { Category, Props } from "../types";
 
-const NavBar = () => {
+const NavBar = ({ categories }: Props) => {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState(false);
-  
-  
+
   return (
     <>
       <Popover className="sticky z-50 px-4 top-0 bg-white">
@@ -76,7 +75,7 @@ const NavBar = () => {
                                 className="-m-4 flex items-start rounded-lg p-2 hover:text-gold"
                               >
                                 <div className="ml-4">
-                                  <p className="text-base uppercase font-medium text-gray-900 hover:text-gold">
+                                  <p className="text-base uppercase text-gray-900 hover:text-gold">
                                     {item.name}
                                   </p>
                                 </div>
@@ -186,9 +185,9 @@ const NavBar = () => {
                         <div className="grid gap-y-4 gap-x-8">
                           {oferta.map((item) => (
                             <a
-                              key={item.name}
-                              href={item.href}
-                              className="text-base uppercase font-medium text-gray-900 hover:text-gold"
+                            key={item.name}
+                            href={item.href}
+                              className="text-base uppercase text-gray-900 hover:text-gold"
                             >
                               {item.name}
                             </a>

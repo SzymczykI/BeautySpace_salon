@@ -9,3 +9,14 @@ export interface Category {
         current: string;
     }
 }
+
+export interface Service {
+    title: string;
+    description: string;
+    slug: {
+        current: string;
+    };
+    price: number;
+    category: {object};
+    images: [object]
+}
