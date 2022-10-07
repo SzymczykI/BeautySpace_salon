@@ -31,6 +31,6 @@ section {
   background-image: url('../assets/paulina.jpg');
 }
 
-h1, h2, h3, h4, h5, p, span, button {
+h1, h2, h3, h4, h5, p, span, button, a {
   font-family: 'Montserrat', sans-serif;
 }

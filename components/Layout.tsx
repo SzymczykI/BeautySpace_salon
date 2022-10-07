@@ -1,9 +1,15 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { sanityClient } from "../sanity";
+import { Category } from "../types";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 
-const Layout = ({ children, categories }: any) => {
+interface Props {
+children: ReactNode,
+categories: [Category]
+}
+
+const Layout = ({ children, categories }: Props) => {
   return (
     <>
       <NavBar categories={categories} />
