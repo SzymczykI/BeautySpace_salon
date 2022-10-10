@@ -1,4 +1,5 @@
-import paulina from "../assets/Paulina2.jpg";
+import Paulina  from "../assets/employees/Paulina.png";
+import Karolina from "../assets/employees/Karolina.png";
 import Image from "next/image";
 
 const Team = () => {
@@ -9,13 +10,14 @@ const Team = () => {
       </section>
       <div className="px-2 ">
         <ul
-          className="flex flex-wrap list-none -mb-px text-lg text-center border-b-0 pl-0 mr-4"
+          className="flex flex-wrap  list-none -mb-px text-lg text-center border-b-0 pl-0 mr-4"
           id="tabs-list"
           role="tablist"
         >
           {pracownice.map((item) => {
             return (
               <li
+              key={item.id_content}
                 className="nav-item flex-grow text-center"
                 role="presentation"
               >
@@ -39,11 +41,12 @@ const Team = () => {
           {pracownice.map((item) => {
             return (
               <div
+              key={item.id_tab}
                 className="tab-pane fade p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
                 id={item.id_content}
                 role="tabpanel"
                 aria-labelledby={item.id_tab}
-              ><Image src={paulina} layout="fill" />
+              ><Image src={Paulina} layout="fill" />
                 {item.description}
               </div>
             );
@@ -72,7 +75,7 @@ const pracownice = [
     name: "Paulina",
     position: "właścicielka, kosmetolog, lingeristka",
     description: "",
-    mainImage: "",
+    mainImage: Paulina,
     images: "",
     id_tab: "tabs-paulina-tabVertical",
     id_content: "tabs-paulina",
@@ -98,7 +101,7 @@ const pracownice = [
     position: "kosmetolog",
     description:
       "Mam na imię Karolina i jestem kosmetologiem, który nieustannie podnosi kwalifikacje i rozwija swoje umiejętności. Aktualnie kształcę się w Akademii Nauk Stosowanych im. Wincentego Pola w Lublinie na studiach magisterskich. Specjalizuje się w zabiegach na twarz, które dobieram indywidualnie do potrzeb skóry oraz oczekiwań klienta. Zajmuje się również pielęgnacją ciała oraz masażami relaksacyjnymi. Zawsze staram sie aby klient czuł się dopieszczony i zaopiekowany. Prywatnie każdą wolną chwilę wykorzystuję na odpoczynek z dobrą książka i swoim ukochanym buldogiem francuskim pod ręką.",
-    mainImage: "",
+    mainImage: Karolina,
     images: "",
     id_tab: "tabs-karolina-tabVertical",
     id_content: "tabs-karolina",

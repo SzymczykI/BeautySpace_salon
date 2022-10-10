@@ -10,7 +10,6 @@ import { sanityClient, urlFor } from "../sanity";
 import { Props } from "../types";
 
 const Home = ({ categories }: Props) => {
-
   return (
     <div>
       <Head>
@@ -29,8 +28,6 @@ const Home = ({ categories }: Props) => {
   );
 };
 
-
-
 export default Home;
 
 export const getServerSideProps = async () => {
@@ -44,6 +41,6 @@ export const getServerSideProps = async () => {
   return {
     props: {
       categories,
-    },
+    }
   };
 };
