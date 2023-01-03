@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
-import { Category, Props } from "../types";
+import {  Props } from "../types";
 
 const NavBar = ({ categories }: Props) => {
   const [open, setOpen] = useState(false);
