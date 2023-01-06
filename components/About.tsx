@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="z-0 grid md:grid-cols-3 md:px-12 md:my-24 ">
       <div className="z-0 w-96 h-max px-3 md:w-11/12 md:col-span-2">
-        <Image src={salon} />
+        <Image src={salon} alt="salon" />
       </div>
       <div className="px-4 mt-2 md:max-w-xl md:px-0 md:mr-8">
         <h1 className="font-light pb-3 text-2xl md:mt-14">KIM JESTEŚMY?</h1>
