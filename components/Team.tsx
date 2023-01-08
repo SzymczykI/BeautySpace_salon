@@ -149,19 +149,6 @@ const pracownice = [
     aria_controls: "tabs-patrycja",
   },
   {
-    name: "Bohdana",
-    position: "podolog, stylistka paznokci",
-    description:
-      "Nazywam się Bohdana i w salonie pełnię obowiązki stylistki paznokcie oraz podologa.  Z wykształcenia jestem magistrem socjologii , ale losy potoczyły się inaczej .Głównym  moim rodzynkiem są zdobnictwa .Prywatnie posiadam 16 rodzai storczyków oraz jestem kocią mamą Franciszki",
-    mainImage: "bogusia",
-    images: "",
-    id_tab: "tabs-bogusia-tabVertical",
-    id_content: "tabs-bogusia",
-    href: "#tabs-bogusia",
-    data_target: "#tabs-bogusia",
-    aria_controls: "tabs-bogusia",
-  },
-  {
     name: "Edyta",
     position: "",
     description: "",
