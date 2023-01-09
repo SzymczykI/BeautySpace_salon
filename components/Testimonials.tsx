@@ -111,14 +111,6 @@ const opinie = [
     date: "1.10.2022",
   },
   {
-    name: "Natalia D.",
-    description:
-      "Polecam, paznokcie bardzo ładne, manicure wykonany starannie i profesjonalnie, a do tego w miłym towarzystwie.",
-    service: "Manicure hybrydowy + baza wzmacniająca",
-    employee: "Marta",
-    date: "26.09.2022",
-  },
-  {
     name: "Laura K.",
     description: "Rzęski pięknie wykonane. Polecam :):):)",
     service: "Uzupełnienie rzęs 3D",
