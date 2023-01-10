@@ -112,7 +112,7 @@ const opinie = [
   },
   {
     name: "Laura K.",
-    description: "Rzęski pięknie wykonane. Polecam :):):)",
+    description: "Rzęski pięknie wykonane. Polecam z całego serca:):):)",
     service: "Uzupełnienie rzęs 3D",
     employee: "Patrycja",
     date: "26.09.2022",
