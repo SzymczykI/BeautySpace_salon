@@ -6,7 +6,7 @@ import Link from "next/link";
 const Testimonials = () => {
   const settings = {
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide: true,
@@ -63,7 +63,7 @@ const Testimonials = () => {
               {item.date}
             </p>
             <p className="font-normal text-sm text-gray-500 tracking-tight text-right">
-              usluge wykonała: {item.employee}
+              usługę wykonała: {item.employee}
             </p>
           </div>
         ))}

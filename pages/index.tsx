@@ -5,6 +5,7 @@ import About from "../components/About";
 import Academy from "../components/Academy";
 import CTA from "../components/CTA";
 import Header from "../components/Header";
+import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import { sanityClient, urlFor } from "../sanity";
 import { Props } from "../types";
@@ -21,9 +22,10 @@ const Home = ({ categories }: Props) => {
       </Head>
       <Header />
       <About />
+      <Services />
       <Academy />
-      <CTA />
       <Testimonials />
+      <CTA />
     </div>
   );
 };
