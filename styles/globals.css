@@ -17,11 +17,12 @@ section {
 }
 
 .custom-img {
-  background-image: url("../assets/salon1.jpg");
+  background-image: url("../assets/film.mp4");
+  opacity: 90%;
 }
 
 .custom-img2 {
-  background-image: url("../assets/salon3.jpg");
+  background-image: url("../assets/salon3.png");
 }
 
 .custom-bg {
