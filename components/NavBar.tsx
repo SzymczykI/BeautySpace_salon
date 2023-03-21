@@ -103,9 +103,9 @@ const NavBar = ({ categories }: Props) => {
                   BEAUTY ACADEMY
                 </h3>
               </Link>
-              <Link href="/galeria">
+              <Link href="/sklep">
                 <h3 className=" text-base font-light tracking-wide cursor-pointer text-gray-900 hover:text-gold">
-                  GALERIA
+                  SKLEP
                 </h3>
               </Link>
               <Link href="/kontakt">
@@ -309,8 +309,8 @@ const menu = [
     href: "/academy",
   },
   {
-    name: "Galeria",
-    href: "/galeria",
+    name: "Sklep",
+    href: "/sklep",
   },
   {
     name: "Kontakt",

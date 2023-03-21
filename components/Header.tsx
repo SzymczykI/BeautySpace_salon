@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className='flex items-center justify-center h-[70vh] mb-8 bg-fixed bg-center bg-cover custom-img'>
+    <header className='flex items-center justify-center h-[70vh] mb-8 bg-center bg-cover custom-img bg-opacity-50'>
       <Link href="/salon">
         <button
           type="button"

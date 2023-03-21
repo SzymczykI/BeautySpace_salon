@@ -3,21 +3,22 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
-@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,600;1,700&family=League+Gothic&family=Montserrat&family=Noto+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400&family=Roboto:wght@300;400;500;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,600;1,700&family=League+Gothic&family=Montserrat&family=Noto+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400&family=Roboto:wght@300;400;500;700&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400&family=Roboto:wght@300;400;500;700&display=swap'); */
-
+/* @import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,600;1,700&family=Katibeh&family=League+Gothic&family=Montserrat:ital,wght@0,400;1,600&family=Noto+Sans:wght@200;300;400;500&family=Noto+Serif+Display:ital,wght@0,300;1,400&family=Raleway:wght@100;200;300;400&family=Roboto:wght@300;400;500;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,600;1,700&family=Katibeh&family=League+Gothic&family=Montserrat:ital,wght@0,400;1,600&family=Noto+Sans:wght@200;300;400;500&family=Noto+Serif+Display:ital,wght@0,300;1,400&family=Playfair+Display:ital@0;1&family=Raleway:wght@100;200;300;400&family=Roboto:wght@300;400;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Cormorant:ital,wght@0,400;0,500;1,400;1,500&family=DM+Serif+Display:ital@0;1&family=Fahkwang:ital,wght@0,600;1,700&family=Katibeh&family=Lato&family=League+Gothic&family=Montserrat:ital,wght@0,400;1,600&family=Noto+Sans:wght@200;300;400;500&family=Noto+Serif+Display:ital,wght@0,300;1,400&family=Playfair+Display:ital@0;1&family=Raleway:wght@100;200;300;400&family=Roboto:wght@300;400;500;700&display=swap');
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
-
-*
-section {
-  padding: 0;
-  margin:0;
+@font-face {
+  font-family: "espoir";
+  src: url("../public/fonts/Espoir.ttf");
 }
 
+
 .custom-img {
-  background-image: url("../assets/film.mp4");
+  background-image: url("../assets/kobieta.mp4");
   opacity: 90%;
 }
 
@@ -35,4 +36,16 @@ section {
 
 h1, h2, h3, h4, h5, p, span, button, a {
   font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Noto Serif Display', serif; */
+  /* font-family: 'Raleway', sans-serif; */
+  /* font-family: 'Playfair Display', serif; */
+}
+
+.custom-title {
+  font-family: 'espoir';
+  font-weight: 600;
+  font-size: 4rem/* 48px */;
+  line-height: 1;
+  color: #E2BB66;
+  letter-spacing: -0.05em;
 }

@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     colors: {
       'gold': "#E2BB66",
+      'back': '#fffbf7',
       'gray-dark': '#273444',
       'gray': {
         50: '#f9fafb',
@@ -25,11 +26,13 @@ module.exports = {
       'trans': '#FFFFFF17',
       'white': '#FFFFFF',
     },
-     container: {
+    container: {
       margin: '0rem',
     },
     extend: {
-
+      fontFamily: {
+        espoir: ["espoir", 'sans-serif']
+      }
     },
   },
   plugins: [],

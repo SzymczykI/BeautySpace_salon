@@ -1,11 +1,13 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import mapa from "../assets/mapa.png";
 
 const CTA = () => {
   return (
-    <section className="flex justify-start flex-initial h-[32rem] bg-center bg-local bg-cover bg-no-repeat md:h-screen paulina">
-      <div className="mt-20 md:mt-72 md:ml-72">
-        <h1 className="text-2xl pl-6 text-gold md:text-4xl">ZAREZERWUJ WIZYTĘ</h1>
+    <section className="grid md:grid-cols-2 h-[32rem] md:h-screen">
+      <div className="mt-20 md:mt-52 md:ml-56">
+        <h1 className="text-2xl pl-6 custom-title text-gold md:text-5xl">Kontakt</h1>
         <h5 className="pl-6 md:text-lg">Wygodna rezerwacja on-line</h5>
         <Link href="https://booksy.com/pl-pl/6703_paulina-szymczyk-beauty-space_salon-kosmetyczny_6832_lublin">
           <button
@@ -24,6 +26,9 @@ const CTA = () => {
         <p className="pl-6 md:text-lg">pn - pt 9:00-20:00</p>
         <p className="pl-6 md:text-lg">sobota 9:00-15:00</p>
         <p className="pl-6 md:text-lg">niedziela zamknięte</p>
+      </div>
+      <div className="pt-24 pr-8">
+      <Image className="shadow-lg" src={mapa} alt="map" />
       </div>
     </section>
   );

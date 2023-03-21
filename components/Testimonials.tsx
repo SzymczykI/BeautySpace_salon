@@ -40,7 +40,7 @@ const Testimonials = () => {
 
   return (
     <div className="container items-center justify-center mb-6">
-      <h1 className="text-4xl text-center text-gold pt-10 mb-2">OPINIE</h1>
+      <h1 className="text-4xl text-center text-gold pt-10 mb-2 custom-title">Opinie</h1>
       <p className="text-lg text-center mb-6 ">
         Sprawdź co o naszych usługach sądzą klienci
       </p>
