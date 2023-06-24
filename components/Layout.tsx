@@ -10,6 +10,8 @@ categories: [Category]
 }
 
 const Layout = ({ children, categories }: Props) => {
+
+  console.log('cat', categories) 
   return (
     <>
       <NavBar categories={categories} />
@@ -19,18 +21,21 @@ const Layout = ({ children, categories }: Props) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const query = `*[_type == "category"]{
     title,
     description, 
     slug
   }`;
 
-  const categories = await sanityClient.fetch(query);
-
-  return {
-    props: { categories },
-  };
+  sanityClient.fetch(query)
+  .then((result) => {
+    console.log(result);
+    return { categories: result };
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 }
 
 export default Layout;

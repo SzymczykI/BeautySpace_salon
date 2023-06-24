@@ -14,6 +14,7 @@ import {  Props } from "../types";
 const NavBar = ({ categories }: Props) => {
   const [open, setOpen] = useState(false);
 
+
   return (
     <>
       <Popover className="sticky z-50 px-4 top-0 bg-white">
@@ -239,6 +240,22 @@ const NavBar = ({ categories }: Props) => {
     </>
   );
 };
+
+// export async function getServerSideProps() {
+//   const query = `*[_type == "category"]{
+//     title,
+//     description, 
+//     slug
+//   }`;
+//   sanityClient.fetch(query)
+//   .then((result) => {
+//     console.log(result);
+//     return result
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
+// }
 
 export default NavBar;
 

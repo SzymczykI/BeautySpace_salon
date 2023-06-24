@@ -7,7 +7,8 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'gold': "#E2BB66",
+      // 'gold': "#E2BB66",
+      'gold': "#dfc286",
       'back': '#fffbf7',
       'gray-dark': '#273444',
       'gray': {

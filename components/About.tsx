@@ -12,7 +12,7 @@ const About = () => {
       </div>
       <div className="px-4 flex flex-col md:max-w-md md:ml-12 md:mt-8">
         <h1 className="justify-center md:text-left pb-3 custom-title text-4xl md:mt-14">
-          Witaj w Beauty Space
+          Witaj w <br/>Beauty Space
         </h1>
         <p className="text-gray-500 text-base">
           Salon Beauty Space powstał w 2018r z pasji do piękna. Od samego
@@ -26,14 +26,6 @@ const About = () => {
         <div className="pl-48">
           <Image src={sign} alt="sign" />
         </div>
-        {/* <Link href="/salon">
-          <button
-            type="button"
-            className="items-center my-4 px-14 py-3 text-sm font-medium text-white bg-gold shadow-sm hover:bg-black "
-          >
-            NASZA OFERTA
-          </button>
-        </Link> */}
       </div>
     </div>
   );

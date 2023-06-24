@@ -3,6 +3,7 @@ import Karolina from "../assets/employees/Karolina.png";
 import Image from "next/image";
 
 const Team = () => {
+
   return (
     <div>
       <section>
@@ -46,7 +47,7 @@ const Team = () => {
                 id={item.id_content}
                 role="tabpanel"
                 aria-labelledby={item.id_tab}
-              ><Image src={Paulina} layout="fill" />
+              ><Image alt="" src={Paulina} layout="fill" />
                 {item.description}
               </div>
             );
