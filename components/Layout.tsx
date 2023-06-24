@@ -6,10 +6,9 @@ import NavBar from "./NavBar";
 
 interface Props {
 children: ReactNode,
-categories: [Category]
 }
 
-const Layout = ({ children, categories }: Props) => {
+const Layout = ({ children }: Props) => {
 
   return (
     <>
