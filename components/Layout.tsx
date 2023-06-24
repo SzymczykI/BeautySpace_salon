@@ -11,10 +11,9 @@ categories: [Category]
 
 const Layout = ({ children, categories }: Props) => {
 
-  console.log('cat', categories) 
   return (
     <>
-      <NavBar categories={categories} />
+      <NavBar  />
       {children}
       <Footer />
     </>
@@ -22,20 +21,13 @@ const Layout = ({ children, categories }: Props) => {
 };
 
 export async function getServerSideProps() {
-  const query = `*[_type == "category"]{
-    title,
-    description, 
-    slug
-  }`;
+  const categories = await sanityClient.fetch(`*[_type == "category"]`);
 
-  sanityClient.fetch(query)
-  .then((result) => {
-    console.log(result);
-    return { categories: result };
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+  return {
+    props: {
+      categories,
+    },
+  };
 }
 
 export default Layout;
